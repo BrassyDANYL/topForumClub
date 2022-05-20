@@ -23,29 +23,18 @@
             <div class="container">
                 <div class="header_black_inside">
                     <nav id="menu" class="menu">
-                        <ul class="links">
-                            <li class="menu-item"><button onclick="myFunction()" class="dropbtn">Sponsors</button></li>
-                            <ul id="myDropdown" class="sponsor_submenu dropdown-content">
-                                <li><a href="/general-sponsors">General Sponsor</a></li>
-                                <li><a href="/platinum-sponsors">Platinum Sponsor</a></li>
-                                <li><a href="/high-tech-sponsors">High-Tech Sponsor</a></li>
-                                <li><a href="gold-sponsors">Gold Sponsor</a></li>
-                                <li><a href="/silver-night-sponsors">Silver Night Sponsor</a></li>
-                            </ul>
-                            <li class="menu-item"><button onclick="myFunction1()" class="dropbtn1">Exhibitors</button></li>
-                            <ul id="myDropdown1" class="exhibitors_submenu dropdown1-content">
-                                <li><a href="/exhibitors-pf-wealth-top-forum-israel-2016">Wealth TOP FORUM Israel 2016</a></li>
-                                <li><a href="/exhibitors-of-another-conference">Another name of conference</a></li>
-                                <li><a href="/exhibitors-of-another-conference-2016">Another name of the conference 2016</a></li>
-                            </ul>
-                            <li class="menu-item"><button onclick="myFunction2()" class="dropbtn2">Speakers</button></li>
-                            <ul id="myDropdown2" class="speakers_submenu dropdown2-content">
-                                <li><a href="/speakers-of-wealth-top-forum-israel-2016">Wealth TOP FORUM Israel 2016</a></li>
-                                <li><a href="/speakers-of-another-conference">Another name of conference</a></li>
-                                <li><a href="/speakers-of-another-conference-2016">Another name of the conference 2016</a></li>
-                            </ul>
-                            <li class="menu-item"><a class="last" href="/media">Media</a></li>
-                        </ul>
+                        <?php
+                        wp_nav_menu( array(
+                        'theme_location' => 'Header menu',
+                        'menu'           => 'Main menu',
+                        'container'      => '',
+                        'menu_class'     => 'links',
+                        'menu_id'        => '',
+                        'echo'           => true,
+                       // 'items_wrap'     => '<ul class="links"></ul>',
+                        'depth'          => 2
+                        ));
+                        ?>
                     </nav>
                     <button class="top-forum-club_btn"><a href="https://en.wikipedia.org/wiki/Forum_Club_Handball">TOP FORUM CLUB</a></button>
                 </div>

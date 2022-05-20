@@ -12,3 +12,43 @@
    font-size:30px;
    color: #000;
 }
+#footerMenuSubtitle{
+   font-family: Roboto;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #c99c47;
+}
+  .sub-menu{
+   display: none;
+   margin-top: 175px;
+}
+.sub-menu-item {
+   background-color: #000;
+   width: 200px;
+   height: 50px !important;
+   padding-left: 20px;
+   
+}
+
+.dropdown:first-child{
+   background-color: transparent;
+}
+.menu-item-234 {
+background-color: #000;
+   width: 200px;
+   height: 50px !important;
+   padding-left: 20px;
+}
+.menu-item-235 {
+background-color: #000;
+   width: 200px;
+   height: 50px !important;
+   padding-left: 20px;
+} 
+.menu-item-236 {
+background-color: #000;
+   width: 200px;
+   height: 50px !important;
+   padding-left: 20px;
+}

@@ -3,15 +3,21 @@
         <div class="container">
             <div class="footer_menu">
                 <nav id="menu" class="menu">
-                    <ul class="links">
-                        <li class="menu-item">
-                            <h2 class="subtitle">TOP FORUM</h2>
+                    <li class="menu-item">
+                            <h2 id="footerMenuSubtitle"class="subtitle">TOP FORUM</h2>
                         </li>
-                        <li class="menu-item"><a href="/sponsors">Sponsors</a></li>
-                        <li class="menu-item"><a href="/our-exhibitors">Exhibitors</a></li>
-                        <li class="menu-item"><a href="/speakers">Speakers</a></li>
-                        <li class="menu-item"><a class="last" href="/media">Media</a></li>
-                    </ul>
+                    <?php 
+                     wp_nav_menu(array(
+                        'theme_location' => 'Footer menu',
+                        'menu'           => 'Footer menu',
+                        'container'      => '',
+                        'menu_class'     => 'links',
+                        'menu_id'        => '',
+                        'echo'           => true,
+                       // 'items_wrap'     => '<ul class="links"></ul>',
+                        'depth'          => 0
+                    ));
+                    ?>
                 </nav>
             </div>
             <div class="footer_contact">

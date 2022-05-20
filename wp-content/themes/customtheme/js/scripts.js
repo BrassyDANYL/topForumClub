@@ -150,8 +150,17 @@ $(".show-more").click(function() {
     $(document).find(".more_service").slideToggle();
     $(".hidden").css("display", "flex");
     $(".show-more").css("display", "none");
-})
+});
 
-
+jQuery(document).ready(function () {
+    jQuery('.menu .dropdown > a').click(function (e) {
+        e.preventDefault();
+        if (jQuery(this).parent().children('.sub-menu:first').is(':visible')) {
+            jQuery(this).parent().children('.sub-menu:first').hide();
+        } else {
+            jQuery(this).parent().children('.sub-menu:first').show();
+        }
+    });
+});
 
 

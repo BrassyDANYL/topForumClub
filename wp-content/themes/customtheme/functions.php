@@ -1,13 +1,16 @@
 <?php
 add_action('wp_enqueue_scripts', 'topForumScripts');
 
+error_reporting(E_ALL);
+    ini_set("display_errors", 1);
+
 function topForumScripts() {
    wp_enqueue_style('topforum-style', get_stylesheet_uri());
    wp_enqueue_style('addstyle', get_template_directory_uri() . '/addstyle.css');
    wp_deregister_script( 'jquery' );
    wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
    wp_enqueue_script( 'jquery' );
-   wp_enqueue_script ('slickjs', get_template_directory_uri() . '/js/slick.min.js', array(jquery), null, true);
+   wp_enqueue_script ('slickjs', get_template_directory_uri() . '/js/slick.min.js', array('jquery'), null, true);
    wp_enqueue_script('myscript', get_template_directory_uri() . '/js/scripts.js', array(), null, true);
    
 }
